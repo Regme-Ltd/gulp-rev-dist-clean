@@ -51,7 +51,7 @@ module.exports = function (revManifestFile, options) {
                 !allowedFiles.includes(file.relative.replace(/\\/g, '/')) &&
                 fs.lstatSync(file.path).isFile()
             ) {
-                filesToDel.push(file.path, { force: options.forceDelete });
+                filesToDel.push(file.path);
                 return cb();
             }
 
@@ -62,7 +62,7 @@ module.exports = function (revManifestFile, options) {
             return cb();
         },
         (cb) => {
-            del.sync(filesToDel);
+            del.sync(filesToDel, { force: options.forceDelete });
             return cb();
         }
     );
