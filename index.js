@@ -13,6 +13,7 @@ module.exports = function (revManifestFile, options) {
         keepRenamedFiles: true,
         keepManifestFile: true,
         emitChunks: false,
+        forceDelete: false,
         ...options
     };
     try {
@@ -50,7 +51,7 @@ module.exports = function (revManifestFile, options) {
                 !allowedFiles.includes(file.relative.replace(/\\/g, '/')) &&
                 fs.lstatSync(file.path).isFile()
             ) {
-                filesToDel.push(file.path);
+                filesToDel.push(file.path, { force: options.forceDelete });
                 return cb();
             }
 
