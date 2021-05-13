@@ -1,5 +1,5 @@
 {
-  "name": "gulp-rev-dist-clean",
+  "name": "regme-gulp-rev-dist-clean",
   "version": "3.0.4",
   "description": "Clean temporary files created by gulp-rev",
   "author": "Alexandre ABRIOUX",
@@ -11,13 +11,13 @@
     "gulp-rev",
     "gulp-rev-clean"
   ],
-  "homepage": "https://github.com/alexandre-abrioux/gulp-rev-clean#readme",
+  "homepage": "https://github.com/Regme-Ltd/gulp-rev-dist-clean#readme",
   "bugs": {
     "url": "https://github.com/alexandre-abrioux/gulp-rev-clean/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alexandre-abrioux/gulp-rev-dist-clean.git"
+    "url": "git@github.com:Regme-Ltd/gulp-rev-dist-clean.git"
   },
   "main": "index.js",
   "files": [
